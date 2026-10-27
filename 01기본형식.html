@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   document.write("오늘은 화요일입니다");
+      //   console.log("화요일");
+      //   alert("오늘은 무슨요일입니까");
+
+      //   confirm("정말로 탈퇴하시겠습니까?")
+      let day = prompt("오늘은 무슨요일입니까?");
+      // alert(day);
+      console.log(day);
+      document.write(day);
+      // alert("오늘은 " + day + " 입니다");
+      alert(`오늘은 ${day}입니다`);//백틱에 변수를 넣으려면 ${변수}
+    </script>
+  </body>
+</html>
+<!--
+html / css :: 정적 홈페이지를 만듬
+자바스크립트 :: 동적 홈페이지를 만듬
+
+자바스크립트를 선언할때는
+<script>
+실행문
+</script>
+내부스크립트는 html문서에 <script>를 선언함
+외부스크립트는 js로 저장한 후 html문서에 <script src="js경로">로 연결함
+
+입력문 1개 :
+prompt("내용을 입력하세요")
+출력문 3개 :
+document.write() : 브라우저에 출력
+alert() : 브라우저에 창 형태로 출력
+console.log() : 확인용도, 변수에 데이터가 들어왔는지 확인
+확인창 1개
+confirm()
+
+변수는 어떤 값을담는 그릇
+보통 변수앞에 let을 선언함
+변수는 한개의 자료만 담을 수 있음
+변수에 a라는 데이터가 담겼는데
+새로운 데이터 b를 넣으면 a는 지워지고 b가 변수에 남음
+-->
