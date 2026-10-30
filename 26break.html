@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      for (let i = 1; i <= 5; i++) {
+        if (i == 3) break;
+        console.log(i);
+      }
+
+      for (let j = 1; j <= 5; j++) {
+        if (j == 3) continue;
+        console.log(j);
+      }
+    </script>
+  </body>
+</html>
+<!--
+
+*break
+중지 :: break
+건너뛰기 :: continue
+
+둘 다 반복문에서 사용함
+-break :: 강제로 반복문을 종료할 떄 사용. break를 만나면 반복문을 빠져나옴
+-continue :: continue를 만나면 아래 나오는 부분을 건너뛰로 다시 위로 올라가서 반복문을 실행함
+
+if문에서 조건을 만족했을 때 실행문이 1개면 {}를 생략할 수 있음
+
+if(조건){
+실행문 1개
+}
+if(조건) 실행문1개
+-->

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let score = prompt("점수를 입력하세요");
+
+      if (score >= 80) {
+        console.log(`참 잘함`);
+      } else if (score >= 70) {
+        console.log(`잘함`);
+      } else {
+        console.log(`보통`);
+      }
+    </script>
+  </body>
+</html>
+<!--
+*다중if
+if(조건){
+조건이 참일때 실행문
+}else if(조건2){
+조건2가 참일때 실행문
+}else if(조건3){
+조건3이 참일때 실행문
+}else{
+조건이 모두 만족을 못했을 때 실행문
+}
+
+if문이 여러개 있으면 다중 if문이라고 함
+if문이 여러개라면 조건이 여러개라고 생각하면 됨
+if문 안에 조건을 만들땐 조건의 범위가 작은것부터 입력함
+
+ex)
+점수가 60점 이상이면 c
+점수가 80점 이상이면 b
+점수가 90점 이상이면 a
+나머지는 d
+
+let score;
+if( score >= 90){
+a
+}else if( score >= 80){
+b
+}else if (score >=60){
+c
+}else{
+d
+}
+-->

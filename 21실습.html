@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let season = Number(
+        prompt(`어느 계절을 좋아하시나요?
+        (1.봄, 2.여름, 3.가을, 4.겨울) 숫자로 입력해주세요`),
+      );
+
+      switch (season) {
+        case 1:
+          document.write(`봄을 좋아하는 타입<br>`);
+          document.write(
+            `<img src="https://www.koya-culture.com/data/photos/20200311/art_15842310846732_ed2fcb.jpg?iqs=0.11218317278028628">입`,
+          );
+          break;
+        case 2:
+          document.write(`여름을 좋아하는 타입<br>`);
+          document.write(
+            `<img src="https://img.magnific.com/free-photo/beautiful-tropical-beach_74190-1327.jpg?semt=ais_hybrid&w=740&q=80">입`,
+          );
+          break;
+        case 3:
+          document.write(`가을을 좋아하는 타입<br>`);
+          document.write(
+            `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYGuSZV_qtO7neuKvTm9NLmU7SFk2ID0yQ3zhjlJGW1Q&s=10">입`,
+          );
+          break;
+        case 4:
+          document.write(`겨울을 좋아하는 타입<br>`);
+          document.write(
+            `<img src="https://contents-cdn.viewus.co.kr/image/2025/02/CP-2023-0442/image-3f3805fc-49ca-49e7-9ccf-eda822009094.jpeg">입`,
+          );
+          break;
+        default:
+          document.write(`다시 입력하세요. 번호만 가능`);
+      }
+    </script>
+  </body>
+</html>

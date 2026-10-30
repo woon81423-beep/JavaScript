@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [1, 2, 3, 4, 5];
+      let total = 0;
+      let total02 = 0;
+      let total03 = 0;
+      console.log(numbers.length);
+
+
+      for (let i = 0; i < numbers.length; i++) {
+        console.log(numbers[i]);
+        total += numbers[i];
+      }
+      console.log(total);
+
+      for (let item of numbers) {
+        total02 += item;
+      }
+      console.log(total02);
+
+      numbers.forEach(function (item) {
+        total03 += item;
+      });
+      console.log(total03);
+
+      numbers.forEach((item)=>{
+        console.log(item)
+      })
+    </script>
+  </body>
+</html>
+<!--
+넘버스 안에 있는 값의 합계를 구하시오-->

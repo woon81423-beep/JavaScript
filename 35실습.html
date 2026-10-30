@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        let num = (item) => {
+          // console.log(item)
+          if (item % 2 == 0) return "짝수";
+          else return "홀수";
+          //실행값이 하나면 중가로가 없어도 됨
+        };
+        let result = num(7);
+        console.log(result);
+
+      let num2 = (item) => {
+        return item % 2 == 0 ? "짝수" : "홀수";
+      };//삼항이면 리턴을 앞에다가 써줌
+      let result2 = num2(8);
+      console.log(result2);
+    </script>
+  </body>
+</html>

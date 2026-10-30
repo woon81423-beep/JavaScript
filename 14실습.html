@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num01 = 50;
+      if (num01 >= 60) {
+        console.log(` ${num01}점은 합격`);
+      } else {
+        console.log(`${num01}점은 불합격`);
+      }
+
+      let = result = num01 >= 60 ? `합격` : `불합격`;
+      console.log(`점수 ${num01}의 결과는 ${result}`);
+
+      //
+      let num02 = 18;
+      if (num02 >= 20) {
+        console.log(`나이 ${num02}는 성인`);
+      } else {
+        console.log(`나이 ${num02}는 미성년자`);
+      }
+
+      let result02 = num02 >= 20 ? `성인` : `미성년자`;
+      console.log(`당신의 나이${num02}세 는 ${result02}`);
+
+      //
+      let num03 = 33;
+      if (num03 >= 30) {
+        console.log(`매우더움`);
+      } else if (num03 >= 20) {
+        console.log(`따뜻함`);
+      } else if (num03 >= 10) {
+        console.log(`쌀쌀함`);
+      } else {
+        console.log(`추움`);
+      }
+
+      let result03 =
+        num03 >= 30
+          ? `매우더움`
+          : num03 >= 20
+            ? `따뜻함`
+            : num03 >= 10
+              ? `쌀쌀함`
+              : `추움`;
+      console.log(`기온은 ${num03}이며 ${result03}`);
+
+      //
+      let num04 = prompt(`숫자를 입력하세요`);
+      if (num04 > 0) {
+        console.log(`숫자 ${num04}는 양수입니다.`);
+      } else if (num < 0) {
+        console.log(`숫자 ${num04}는 음수입니다.`);
+      } else {
+        console.log(`숫자 ${num04}는 0입니다.`);
+      }
+
+      let result04 = num04 > 0 ? `양수` : num04 < 0 ? `음수` : `0`;
+
+      //
+      let num05 = Number(prompt(`첫번째 숫자를 입력하세요`));
+      let num06 = Number(prompt(`두번째 숫자를 입력하세요`));
+      let total = Number((num05 + num06) / 2);
+      if (total >= 90) {
+        console.log(`점수 ${total}점의 등급은 A`);
+      } else if (total >= 80) {
+        console.log(`점수 ${total}점의 등급은 B`);
+      } else if (total >= 70) {
+        console.log(`점수 ${total}점의 등급은 C`);
+      } else {
+        console.log(`점수 ${total}점의 등급은 D`);
+      }
+
+      let result05 =
+        total >= 90 ? `A` : total >= 80 ? `B` : total >= 70 ? `C` : `D`;
+      console.log(`당산의 점수 ${total}의 등급은 ${result05}`);
+    </script>
+  </body>
+</html>
+<!--
+if문, 삼항으로 2개의 타입으로 만들기
+문제1.점수가 60점 이상이면 합격. 60점 미만이면 불합격
+
+문제2.
+나이가 20세 이상이면 성인. 20세 미만이면 미성년자
+
+문제3.숫자를 입력받아서 0보다 크면 양수,
+ 0보다 작으면 음수 . 0이면 0입니다를 출력
+
+문제4.기온이 30도 이상이면 매우 더움,
+20도 이상이면 따뜻함
+10도 미만이면 쌀쌀함
+10도 미만이면 추움
+
+문제5. 점수를 2개 입력받아서 평균을 구함
+평균이 90점 이상이면 a
+80점이상이면 b
+70점이상이면 c
+70점미만이면 d
+
+-->

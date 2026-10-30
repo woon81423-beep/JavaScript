@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let age = prompt(`나이를 입력하세요`);
+      //   if (age > 20) {
+      //     console.log(`당신의 나이는 ${age}입니다`);
+      //   } else {
+      //     console.log(`당신의 나이는 20살 미만입니다.`);
+      //   }
+
+      //삼항연산자
+
+      age =
+        age > 20
+          ? `당신의 나이는 ${age}입니다`
+          : `당신의 나이는 ${age}이며 20살 미만입니다.`;
+      console.log(age);
+
+      let num = Number(prompt(`숫자를 입력하세요`));
+      //   console.log(typeof num);
+      //   if (num % 2 === 0) {
+      //     console.log(`당신이 입력한 숫자는 ${num}이며 짝수입니다`);
+      //   } else {
+      //     console.log(`당신이 입력한 숫자는 ${num}이며 홀수입니다.`);
+      //   }
+
+      //삼항연산자
+      num =
+        num % 2 === 0
+          ? `당신이 입력한 숫자는 ${num}이며 짝수입니다`
+          : `당신이 입력한 숫자는 ${num}이며 홀수입니다.`;
+      console.log(num);
+
+      //센세
+      let ag = prompt("숫자입력");
+      result = ag >= 20 ? `${ag}살` : `미만`;
+      console.log(`${result}입니다.`);
+    </script>
+  </body>
+</html>
+<!--
+1.나이를 입력받아서 
+20살 이상이면 당신의 나이는 ~살입니다. 
+20살 미만이면 당신의 나이는 20살 미만입니다
+
+2.숫자를 입력받아서 
+짝수인지 홀수인지 구분
+22=> 당신이 입력한 숫자는 22이며 짝수입니다. 
+3=> 당신이 입력한 숫자는 3이며 홀수입니다.
+
+3. 
+-->

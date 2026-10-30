@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = 2.65;
+      console.log(num);
+      console.log(typeof num);
+
+      let num02 = parseInt(2.65);
+      console.log(num02);
+      console.log(typeof num02);
+
+      let srt = "123";
+      console.log(srt);
+      console.log(typeof srt);
+
+      //   let num03 = prompt("숫자를 입력하세요");
+      //   console.log(num03);
+      //   console.log(typeof num03);
+
+      //   let num04 = Number(prompt("숫자를 입력하세요"));
+      //   console.log(num04);
+      //   console.log(typeof num04);
+
+      let num05 = parseInt(prompt("숫자를 입력하세요"));
+      console.log(num05);
+      console.log(typeof num05);
+
+      let num06 = parseFloat(prompt("숫자를 입력하세요"));
+      console.log(num06);
+      console.log(typeof num06);
+    </script>
+  </body>
+</html>
+<!--
+*자료형
+숫자는 타입이 number
+문자는 타입이 string
+typeof로 타입확인
+
+number은
+parseInt는 소수점을 없앤 정수형으로 나타남(실수형을 정수형)
+parseFlote는 실수형으로 나타남(정수형을 실수형)
+
+Number은 입력한 값을 그대로 나타냄(숫자로 취급)
+
+prompt로 입력을 받으면 무조건 문자인 string으로 취급
+그래서 숫자로 바꾸고 싶다면 Number, parseInt, parseFloat를 앞에 붙여서 숫자로 변경해야함
+
+연산을 할 때는 숫자로 변경해야함
+-->

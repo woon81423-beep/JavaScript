@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="user" placeholder="이름을 입력해주세요" />
+    <button id="btn">클릭</button>
+    <script>
+      let user = document.querySelector("#user");
+      let btn = document.querySelector("#btn");
+
+      //   console.log(user)
+      btn.onclick = () => {
+        console.log(user.value);
+        // user.value = "";
+      }; //입력하고 버튼을 누르면 지워지는 이벤트, 값은 들어감
+
+      user.onfocus = () => {
+        user.value = "";
+      }; //클릭하면 지워지는 이벤트, 값은 들어감
+      
+    </script>
+  </body>
+</html>
+<!--
+*이벤트
+이벤트 :: 사용자가 클릭, 스크롤, 입력했을 때 일어나는 사건을 이벤트라고 함
+마우스이벤트 :: click, mouseenter(mouseover), mouseleave(mouseout)
+포커스이벤트 :: focus
+input태그에 마우스를 클릭하여 입력 상태로 만든것을 포커스했다고 함
+
+선택자.onclick = function(){
+실행문
+}
+선택자.onclick = ( ) => {
+실행문
+}
+선택자.value ==> input에 입력한 데이터
+-->

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li>list01</li>
+      <li>list02</li>
+      <li>list03</li>
+      <li>list04</li>
+    </ul>
+    <script>
+      let list = document.querySelectorAll("li");
+
+      console.log(list);
+      // list[0].style.color = "red"
+      // list[1].style.color = "orange"
+      // list[2].style.color = "blue"
+      // list[3].style.color = "tomato"
+
+      for (let i = 0; i < list.length; i++) {
+        list[i].style.color = "red";
+      }
+
+      for (item of list) {
+        item.style.backgroundColor = "#ccc";
+      }
+
+      list.forEach(function (item) {
+        item.style.fontSize = "20px";
+      });
+
+      list.forEach((item) => {
+        item.style.fontSize = "20px";
+      });
+
+      list.forEach((item) => (item.style.fontSize = "20px"));
+    </script>
+  </body>
+</html>
+<!--
+배열은 순번이 있음.
+0부터 시작.
+배열명[순번]을 넣으면 데이터를 꺼내 수 있음
+-->

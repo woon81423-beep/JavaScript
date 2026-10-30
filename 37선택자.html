@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box1">box</div>
+    <p>box2</p>
+    <script>
+      let box1 = document.querySelector(".box1");
+    //   console.log(box1);
+      let box2 = document.querySelector("p");
+    //   console.log(box2);
+      box1.style.color = "red";
+      box2.style.backgroundColor = "#ccc";
+    </script>
+  </body>
+</html>
+<!--
+*선택자
+html에 있는 요소는 태그, 클래스, 아이디
+html요소를 선택하는 방법은 2가지
+
+<하나만 선택>
+-document.getElementById("아이디명")
+
+-document.querySeletor("#아이디명")
+-document.querySeletor(".클래스명")
+-document.querySeletor("태그")
+
+<여러개 선택>
+-document.getElementsByTagName("태그") :: 여러개 선택, 배열로 표시가 됨.
+-document.getElementsByClassName("클래스명") ::여러개 선택, 배열로 표시가 됨
+
+-document.querySeletorAll(".클래스명")
+-document.querySeletorAll("태그")
+
+제이쿼리의 $("선택자")
+
+<스타일변경>
+변수.style.속성 = "속성값"
+변수.style.color = "#ccc"
+변수.style.background = "red"
+-->

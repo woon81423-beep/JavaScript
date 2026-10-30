@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num01 = Number(prompt(`첫번째 과목의 점수를 입력하세요`));
+      let num02 = Number(prompt(`두번째 과목의 점수를 입력하세요`));
+      let total = (num01 + num02) / 2;
+      console.log(`평균점수 : ${total}`);
+      if (num01 >= 40 && num02 >= 40) {
+        if (total >= 60) {
+          console.log(`합격입니다.`);
+        } else {
+          console.log(`불합격입니다.`);
+        }
+      } else {
+        console.log(`과락임`);
+      }
+
+      let result =
+        num01 >= 40 && num02 >= 40
+          ? total >= 60
+            ? `합격입니다.`
+            : `불합격입니다.`
+          : `과락이네용.`;
+
+      console.log(result);
+
+      //
+
+      let jumsu1 = Number(prompt("점수1입력"));
+      let jumsu2 = Number(prompt("점수2입력"));
+      let avg = (jumsu1 + jumsu2) / 2;
+      let comment;
+
+      if (avg >= 60) {
+        if (jumsu1 < 40) {
+          comment = `당신의 평균은 ${avg}이나 점수가 ${jumsu1}이므로 불합격입니다`;
+        } else if (jumsu2 < 40) {
+          comment = `당신의 평균은 ${avg}이나 점수가 ${jumsu2}이므로 불합격입니다`;
+        } else {
+          comment = `당신의 평균은 ${avg}이며 합격입니다`;
+        }
+      } else {
+        comment = `당신의 평균은 ${avg}이며 불합격입니다`;
+      }
+
+      console.log(comment);
+
+      let result02 =
+        avg >= 60
+          ? jumsu2 < 40
+            ? (comment = `당신의 평균은 ${avg}이나 점수가 ${jumsu2}이므로 불합격입니다`)
+            : (comment = `당신의 평균은 ${avg}이며 합격입니다`)
+          : (comment = `당신의 평균은 ${avg}이며 불합격입니다`);
+      console.log(result02);
+    </script>
+  </body>
+</html>
+<!--
+점수를 입력받음
+평균을 구해서 60점 이상이면 합격, 아니면 불합격
+
+컴퓨터 활용능력 필기 시험의 합격 조건
+과목은 2과목이며 
+평균 60점 이상이고 모든 과목 점수가 40점 이상이면 합격
+한 과목이라도 과락이있으면 불합격
+-->

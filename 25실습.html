@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let i = 1;
+      let total = 0;
+      while (i <= 10) {
+        // console.log(i);
+        total += i;
+        i++;
+      }
+      console.log(`1부터 10까지의 합은 ${total}`);
+
+      //
+
+      let e = 1;
+      while (e <= 20) {
+        if (e % 3 == 0 && e % 5 == 0) {
+          console.log(`3의 배수이면서 6의 배수인 수  ${e}`);
+        }
+        e++;
+      }
+    </script>
+  </body>
+</html>
+<!--
+1.while문을 이용해서 1부터 10까지의 합계
+2.1부터 20까지의 수 중에서 2의 배수이면서 6의 배수인 숫자만 출력하세요
+
+2의 배수는 2로 나눴을때 나머지가 0
+6의 배수는 6로 나눴을때 나머지가 0
+
+-->

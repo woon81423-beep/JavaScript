@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let score = prompt("당신의 점수를 입력하세요");
+      let result = score >= 90 ? `참 잘함` 
+      : score >= 70 ? `잘함`
+      : `보통입니다.`;
+      document.write(`당신의 점수는 ${score}이며 ${result}`);
+    </script>
+  </body>
+</html>
+
+<!--
+*다중삼항연산자
+다중삼항연산자는 조건문이 여러개인거
+
+조건문1 ? 조건이 참일때 실행
+: 조건문2 ? 조건이 참일때 실행
+: 조건문 3 ? 조건이 참일때 실행 : 조건을 만족 못할때 실행
+-->
