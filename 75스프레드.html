@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const numbers = [1, 2, 3, 4, 5];
+      let wrap01 = numbers.map((item) => {
+        return item * 2;
+      });
+      console.log(wrap01);
+
+      let wrap02 = numbers.map((item) => item * 2);
+      console.log(wrap02);
+      console.log(numbers);
+      console.log(...numbers);
+      console.log(...wrap02);
+
+      let arr = [...numbers];
+      console.log(arr);
+    </script>
+  </body>
+</html>
+<!--
+*스프레드
+스프레드문법(전개구문)은 점 세개(...)를 사용하여
+배열, 문자, 객체와 같은 여러 값들을 펼쳐서 개별적인 항목으로 만드는 기능
+-->

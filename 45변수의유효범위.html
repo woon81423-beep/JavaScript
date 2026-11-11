@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //전역스코프
+      let name = "mbc";
+      const hello = () => {
+        console.log(name);
+      };
+      hello();
+
+      //지역변수
+      const test = () => {
+        let num = 10;
+        console.log(num);
+      };
+      //console.log(num); 지역인데 바깥에 써서 오류가 남
+      test();
+
+      //전역 +  지역
+      let i = 10;
+      const test2 = () => {
+        let i = 20;
+        console.log(`함수안${i}`);
+      };
+      test2();
+      console.log(`함수밖 ${i}`);
+
+      //지역
+      const stu = () => {
+        let name2 = "mbc01";
+        console.log(name2);
+      };
+      const stu2 = () => {
+        let name2 = "mbc02";
+        console.log(name2);
+      };
+      stu();
+      stu2();
+
+      if (true) {
+        let num01 = 10;
+        let name02 = "mbc";
+        console.log(num01, name02);
+      }
+      //   console.log(num01, name2); if안에서 선언된 함수도 안에서만 사용가능
+    </script>
+  </body>
+</html>
+<!--
+*스코프
+스코프는 변수나 함수에 접근할 수 있는 범위를 의미함
+변수를 선언했을 떄 어디에서 사용할 수 있고 어디에서는 사용할 수 없는지를 결정하는 규칙
+
+스코프는 전역 스코프가 있고 지역 스코프가 있음
+
+바깥쪽 스코프에서 선언한 변수는 안쪽에서 사용이 가능
+안쪽 스코프에서 선언한 변수는 바깥쪽에서 사용이 불가능함
+
+바깥에 있는 스코프를 전역스코프
+안쪽에 있는 스코프를 지역스코프
+
+지역변수 :: 변수를 특정영역에서만 사용할 수 있는것
+(특정함수 안에서 쓸 수 있는 변수)
+
+전역변수 :: 모든 곳에서 접근할 수 있어서 어느영역에서든 사용할 수 있는것
+어디에서든지 사용할 수 있어서 예상하지 않은 값이 나올 수 있음
+(코드 전체에서 쓸 수 있는 변수)
+
+같은 이름의 변수인 경우 지역변수가 우선
+
+let을 안쓰면 var로 생각해서 전역변수가 됨
+let i ==> 전역, 지역
+i, var i ==> 전역변수
+-->

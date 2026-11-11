@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = prompt("숫자를 입력하세요");
+      console.log(str.length);
+      let total = ""; //개수
+
+      for (let i = 0; i < str.length; i++) {
+        if (str[i] == "3" || str[i] == "6" || str[i] == "9") {
+          total += "👏";
+        }
+      }
+
+      document.write(`입력한 숫자는 ${str}이며 3,6,9개수는 ${total}입니다`);
+    </script>
+  </body>
+</html>
+<!--
+prompt 로 숫자를 입력받음. 결과는 입력한 숫자는 1이며 3,6,9개수는 0 입니다.
+입력한 숫자를 33이며 3,6,9 개수는 2 입니다. 
+-->

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>배경색</button>
+    <script>
+      let btn = document.querySelector("button");
+
+      //1
+      //
+      //   btn.addEventListener("click", change);
+      //   function change() {
+      //     // btn.style.backgroundColor = "orange";
+      //     this.style.backgroundColor = "orange";
+      //   }
+
+      //2 화살표함수는 함수를 밑으로 내려야함, this도 사용안됨
+
+      let change = () => {
+        btn.style.backgroundColor = "orange";
+      };
+
+      btn.addEventListener("click", change);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <div>아이디 : <input id="id" type="text" placeholder="아이디입력" /></div>
+    <div>
+      비밀번호 : <input id="pw" type="password" placeholder="비밀번호입력" />
+    </div>
+
+    <button id="btn" type="submit">전송</button>
+    <script>
+      let id = document.querySelector("#id");
+      let pw = document.querySelector("#pw");
+      let btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", () => {
+        let idValue = id.value;
+        let pwValue = pw.value;
+
+        if (id.value == "") {
+          alert("아이디 입력해 주세요");
+        } else if (pw.value == "") {
+          alert("비밀번호를 입력해주세요");
+        } else {
+          alert(`아이디는 ${idValue} 이고 패스워드는 ${pwValue}입니다.`);
+        }
+      });
+        id.addEventListener("focus",()=>{
+            id.value =""
+        })
+        pw.addEventListener("focus",()=>{
+            pw.value =""
+        })
+    </script>
+  </body>
+</html>

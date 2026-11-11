@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        background-color: rgb(255, 156, 189);
+        text-align: center;
+        padding: 20px;
+        width: 30%;
+        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+
+    <script>
+      let div = document.querySelector("div");
+
+      let start = () => {
+        let day = new Date();
+        let hur = day.getHours();
+        let min = day.getMinutes();
+        let sec = day.getSeconds();
+
+        let ampm = hur < 12 ? "AM" : "PM";
+        hur = hur % 12 || 12;
+
+        min = min > 9 ? min : `0${min}`;
+        sec = sec > 9 ? sec : `0${sec}`;
+        div.textContent = `${ampm} ${hur}시 ${min}분 ${sec}초`;
+      };
+      setInterval(start, 1000);
+      start();
+    </script>
+  </body>
+</html>
+<!--
+0시를 am 0시 = am 12시로
+
+am : 오전 0~11시
+pm : 12~23시( 14시 = pm2시)
+
+다중 if문으로 만들면 됨
+분, 초는 3자리로 만들었음(0~9)
+01분
+01초
+-->

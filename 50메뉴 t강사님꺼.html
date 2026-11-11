@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        word-break: keep-all;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .tab {
+        width: 400px;
+        display: flex;
+        border-bottom: 1px solid #aaa;
+        margin: 50px auto;
+      }
+      .tab li {
+        width: calc(100% / 3);
+
+        text-align: center;
+        background-color: #ccc;
+        transition: 0.5s;
+      }
+      .tab a {
+        width: 100%;
+        padding: 10px 0px;
+        display: inline-block;
+      }
+      .tab li:hover {
+        background-color: #ddd;
+      }
+
+      .tab li.active {
+        background-color: #222;
+        color: #fff;
+      }
+
+      .content li {
+        width: 600px;
+        border: 1px solid #ccc;
+        margin: 0px auto;
+        padding: 30px;
+        background-color: #ddd;
+        display: none;
+      }
+
+      .content li.active {
+        display: block;
+      }
+      .content h2 {
+        font-size: 20px;
+        margin-bottom: 1.2rem;
+      }
+      .content p {
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="tab">
+      <li class="active"><a href="#">회사소개</a></li>
+      <li><a href="#">제품소개</a></li>
+      <li><a href="#">오시는길</a></li>
+    </ul>
+    <ul class="content">
+      <li class="active">
+        <h2>회사소개 내용</h2>
+        <p>우리 회사는 고객에게 최고의 서비스를 제공합니다</p>
+      </li>
+      <li>
+        <h2>제품소개 내용</h2>
+        <p>다양한 제품과 서비스를 만나보세요</p>
+      </li>
+      <li>
+        <h2>오시는길</h2>
+        <p>서울에 위치하고 있습니다</p>
+      </li>
+    </ul>
+    <script>
+      let tabs = document.querySelectorAll(".tab li");
+      let contents = document.querySelectorAll(".content li");
+
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+          //모든 탭의 active제거
+          tabs.forEach((item) => {
+            item.classList.remove("active");
+          });
+
+          //클릭한 tab에 active붙임
+          tab.classList.add("active");
+
+          //모든 content li를 숨기게 함
+          contents.forEach((list) => {
+            list.classList.remove("active");
+          });
+
+          //클릭한 tab의 순번에 해당하는  content li를 보이게 함
+          contents[index].classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

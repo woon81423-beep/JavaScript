@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        word-break: keep-all;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+      }
+      ul img {
+        width: 100%;
+      }
+      ul li {
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.5s;
+      }
+      ul li:hover {
+        transform: scale(1.1);
+      }
+      body {
+        position: relative;
+        background-color: orange;
+      }
+      .total {
+        width: 80vw;
+        height: 90vh;
+        /* border: 1px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px auto;
+      }
+
+      /*모달*/
+      .bg {
+        background-color: rgba(32, 25, 25, 0.7);
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        margin: 0px auto;
+        display: none;
+      }
+
+      button {
+        text-align: right;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 2px 5px;
+        /* background-color: none; */
+      }
+
+      .bg.on {
+        display: block; /* .on이 붙으면 표시 */
+      }
+      .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        display: none;
+      }
+      .modal.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="total">
+      <ul>
+        <li><img src="img/pic1.jpg" alt="" /></li>
+        <li><img src="img/pic2.jpg" alt="" /></li>
+        <li><img src="img/pic3.jpg" alt="" /></li>
+      </ul>
+      <div class="good">
+        <div class="bg">
+          <div class="modal">
+            <button>X</button>
+            <div><img src="img/pic1.jpg" alt="" /></div>
+          </div>
+        </div>
+        <div class="bg">
+          <div class="modal">
+            <button>X</button>
+            <div><img src="img/pic2.jpg" alt="" /></div>
+          </div>
+        </div>
+        <div class="bg">
+          <div class="modal">
+            <button>X</button>
+            <div><img src="img/pic3.jpg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let list = document.querySelectorAll("li");
+      let bg = document.querySelectorAll(".bg");
+      let modal = document.querySelectorAll(".modal");
+      let button = document.querySelectorAll("button");
+      //for문 사용시
+      // for (let i = 0; i < list.length; i++) {
+      //   list[i].addEventListener("click", () => {
+      //     modal[i].classList.add("on");
+      //     bg[i].classList.add("on");
+      //   });
+
+      //   button[i].addEventListener("click", () => {
+      //     modal[i].classList.remove("on");
+      //     bg[i].classList.remove("on");
+      //   });
+      // }
+
+      list.forEach((item, index) => {
+        // 모달 열기
+        item.addEventListener("click", () => {
+          modal[index].classList.add("on");
+          bg[index].classList.add("on");
+        });
+
+        // 모달 닫기
+        button[index].addEventListener("click", () => {
+          modal[index].classList.remove("on");
+          bg[index].classList.remove("on");
+        });
+      });
+    </script>
+  </body>
+</html>

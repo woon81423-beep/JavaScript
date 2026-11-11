@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let sub = [
+        { name: "홍길동", age: 30 },
+        { name: "mbs", age: 10 },
+      ];
+       let wrap01 = sub.map((item)=>item.name);
+      console.log(wrap01)
+   
+      let wrap02 = sub.map((item)=>item.age);
+      console.log(wrap02)
+    </script>
+  </body>
+</html>
+<!--
+배열map((하나씩 받는 변수, 인덱스)=> {
+return반환값
+}
+-->

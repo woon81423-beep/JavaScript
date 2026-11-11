@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      .tab {
+        display: flex;
+        margin: 50px auto 0px;
+        font-size: 1.5rem;
+        width: 50%;
+        height: 50px;
+        line-height: 50px;
+        justify-content: space-around;
+        background-color: lightblue;
+      }
+      .tab li {
+        width: calc(100% / 3);
+
+        text-align: center;
+      }
+      .tab li:hover {
+        background-color: aquamarine;
+      }
+      /* .tab li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      } */
+      .content {
+        width: 50%;
+        margin: 0px auto;
+        position: relative;
+        height: 200px;
+        border: 1px solid #ccc;
+      }
+      .content li {
+        position: absolute;
+        width: 100%;
+        background-color: aliceblue;
+        height: 100%;
+        top: 0%;
+        left: 0%;
+        padding: 1rem;
+        display: none;
+      }
+      .tab li.on {
+        background-color: aquamarine;
+        color: #fff;
+      }
+      .content li.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="tab">
+      <li class="on"><a href="#">회사소개</a></li>
+      <li><a href="#">제품소개</a></li>
+      <li><a href="#">오시는길</a></li>
+    </ul>
+    <ul class="content">
+      <li class="on">
+        <h2>회사소개 내용</h2>
+        <p>우리 회사는 고객에게 최고의 서비스를 제공합니다.</p>
+      </li>
+      <li>
+        <h2>제품소개 내용</h2>
+        <p>다양한 제품과 서비스를 만나보세요</p>
+      </li>
+      <li>
+        <h2>오시는길</h2>
+        <p>서울에 위치하고 있습니다</p>
+      </li>
+    </ul>
+
+    <script>
+      let tab = document.querySelectorAll(".tab li");
+      let content = document.querySelectorAll(".content li");
+
+      console.log(tab);
+
+      tab.forEach((list, index) => {
+        // 각각의 탭에 클릭 이벤트 등록
+        list.addEventListener("click", () => {
+          // 모든 콘텐츠의 on 제거
+          content.forEach((item) => {
+            item.classList.remove("on");
+          });
+          // 모든 탭의 on 제거
+          tab.forEach((item) => {
+            item.classList.remove("on");
+          });
+          // 클릭한 순서의 콘텐츠만 활성화
+          content[index].classList.add("on");
+          tab[index].classList.add("on");
+        });
+      });
+    </script>
+  </body>
+</html>

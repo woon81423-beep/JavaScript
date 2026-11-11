@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="hello">hello</div>
+    <script>
+      let hello = document.querySelector("#hello");
+      // console.log(hello)
+      hello.addEventListener("click", () => {
+        // console.log("클릭")
+        // hello.textContent = "안녕";
+        // hello.innerText = "안녕2";
+        hello.innerHTML = "<h2>안녕3</h2>"
+      });
+    </script>
+  </body>
+</html>
+<!--
+
+*textContent : 선택자.textContnet = "바뀔내용" ==> 내용을 바꿈
+innerText : 선택자.innerText = "바뀔내용" ==> 내용을 바꿈
+innerHTML :: 선택자.innerHTML ="<span>내용</span> ==> 태그를 삽입
+선택자에 태그를 추가할때 사용
+선택자가 부모가 되고 오른쪽에 있는 태그는 자식이 됨
+
+-->

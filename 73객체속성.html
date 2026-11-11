@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const mbc = {
+        name: "mbc",
+        year: 1991,
+      };
+
+      //값을 조회
+      console.log(mbc);
+      console.log(mbc.name);
+      console.log(mbc.year);
+
+      //객체에 있는 데이터 수정
+      mbc.year = 2000;
+      console.log(mbc);
+
+      //객체에 데이터 추가
+      mbc.location = "화곡역";
+      console.log(mbc);
+
+      mbc.item = "html/css";
+      console.log(mbc);
+
+      //객체에 데이터 삭제
+      delete mbc.year;
+      console.log(mbc);
+
+      //객체에 있는 key를 출력
+      for (item in mbc) {
+        console.log(item);
+      }
+
+      //객체에 있는 값 출력
+      for (itme in mbc) {
+        console.log(mbc[item]);
+      }
+
+    </script>
+  </body>
+</html>
+<!--
+*객체속성
+객체에 속성값을 조회할때는 객체에 점을 선언하고 해당 속성(키)에 접근하면 됨
+mbc.name
+
+객체를 수정할 때는 해당 속성(키)에 새로운 값을 할당하면됨
+mbc.year = 2000
+
+삭제할때는 delete 키워드를 앞에 선언해서 특성 속성을 제거함
+delete mbc.year
+
+객체에 대한 반복문은 for in을 사용함
+값을 출력하고 싶으면 변수[key]
+
+for(let 하나씩 받는 변수 in 객체변수){
+console.log(하나씩받는 key변수) ==>key 출력
+console.log(객체변수[key변수]) ==> value인 값을 출력
+}
+
+for in은 객체 반복문
+for of, forEach 배열 반복문
+-->

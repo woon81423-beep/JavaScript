@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="user" placeholder="글자를 입력" />
+    <button id="btn" onclick="on()">클릭</button>
+    <script>
+      let user = document.querySelector("#user");
+      let btn = document.querySelector("#btn");
+
+      //   btn.addEventListener("click", () => {
+      //     let msg = user.value;
+      //     if (msg == "") {
+      //       alert(`글자를 입력해주세요`);
+      //     } else {
+      //       alert(`${msg}을 입력하셨습니다.`);
+      //     }
+      //   });
+
+      //   user.addEventListener("focus", () => {
+      //     user.value = "";
+      //   });
+      let on = () => {
+        let gg = user.value;
+        if (gg == "") {
+          alert("글자를 입력해주세요");
+        } else {
+          alert(`${gg}을 입력하셨습니다.`);
+        }
+      };
+      user.onfocus = () => {
+        user.value = "";
+      };
+    </script>
+  </body>
+</html>
+<!--
+1.input, button 가지고 옴
+
+2.btn을 클릭하면 함수를 실행할 수 있도록 만듬
+3.input에 입력한 값을 변수에 담음
+4.변수에 값이 ""라면 글자를 입력해주세요
+아니면 입력한 글자를 보이게하면됨
+
+5.input에 포커스를 했을 때 함수를 실행할 수 있도록 만듬
+6.input에 입력한 값을 ""함
+-->

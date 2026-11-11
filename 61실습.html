@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>멈춤</button>
+    <div></div>
+    <script>
+      let stop = document.querySelector("button");
+      let txt = document.querySelector("div");
+      let i = 0;
+      let start = () => {
+        i++;
+        txt.innerText = `${i}`;
+      };
+      let btn = setInterval(start, 1000);
+
+      stop.addEventListener("click", () => {
+        clearInterval(btn);
+      });
+
+      //   for (let i = 1; i <= 100; i++) {
+      //     i = () => {
+      //       txt++;
+      //       txt.innerText = "i";
+      //       stop.addEventListener("click", () => {
+      //         clearInterval(i);
+      //       });
+      //     };
+      //     setInterval(txt, 1000);
+      //   }
+    </script>
+  </body>
+</html>

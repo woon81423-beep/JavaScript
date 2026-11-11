@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        width: 60%;
+        height: 80vh;
+        border: 1px solid red;
+        border-radius: 20px;
+        margin: 0px auto;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+        position: relative;
+      }
+      button {
+        cursor: pointer;
+      }
+      h2 {
+        width: 200px;
+        margin: 0px auto;
+      }
+      .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background-color: aliceblue;
+        padding: 1rem;
+        border-radius: 10px;
+        display: none;
+      }
+      #close {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        font-size: 2rem;
+      }
+      .modalContent > div {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 2rem;
+        width: 600px;
+      }
+      img {
+        width: 70%;
+      }
+      body.on {
+        background-color: #777;
+      }
+      .modal.on {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="txt">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+        cumque, quaerat omnis praesentium recusandae, dolorem, veniam rem sint
+        autem eius corporis minima. Odit ut totam fugit, sapiente velit optio
+        laboriosam.
+      </div>
+      <button id="open">프로필보기</button>
+    </div>
+    <div class="modal">
+      <div class="modalContent">
+        <button id="close">x</button>
+        <h2>My profile</h2>
+        <div>
+          <img
+            src="IMG/pic1.jpg
+          "
+            alt=""
+          />
+          <div class="txt">
+            <p>이름 :김가원</p>
+            <p>주소 :김가원집</p>
+            <p>전화번호 :12-123-1234</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let open = document.querySelector("#open");
+      let close = document.querySelector("#close");
+      let modal = document.querySelector(".modal");
+      let on = document.querySelector(".on");
+      let body = document.querySelector("body");
+
+      open.addEventListener("click", () => {
+        modal.classList.add("on");
+        body.classList.add("on");
+      });
+
+      close.addEventListener("click", () => {
+        modal.classList.remove("on");
+        body.classList.remove("on");
+      });
+    </script>
+  </body>
+</html>

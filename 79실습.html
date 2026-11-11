@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [1, 2, 3, 4, 5];
+      let result01 = numbers.filter((i) => i % 2 == 0);
+      console.log(result01);
+
+      let str = ["hteml", "css", "jQuery"];
+      let wrap02 = [...str];
+      let result02 = str.filter((i) => i.length >= 4);
+      console.log(result02)
+
+      let user = [
+        { name: "mbc", age: 20 },
+        { name: "홍길동", age: 10 },
+        { name: "영희", age: 30 },
+      ];
+
+      let result03 = user.filter((i)=> i.age >= 20);
+      console.log(result03[0].name)
+      console.log(result03[1].name)
+    </script>
+  </body>
+</html>
+
+<!--
+filter 이용
+문제1.numbers에서 짝수만 추출
+
+-->

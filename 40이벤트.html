@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">버튼</button>
+    <button id="btn02" onclick="msg()">클릭</button>
+
+    <script>
+      let btn = document.querySelector("#btn");
+      //   console.log(btn)
+
+      btn.onclick = () => {
+        console.log("클릭");
+      };
+      btn.addEventListener("click", () => {
+        console.log("클릭");
+      }); //자바스크립트에서는 이 형식이 더 많이쓰임
+
+      let msg = () => {
+        alert("메시지입니다.");
+      };
+    </script>
+  </body>
+</html>
+<!--
+선택자.addEventListener("이벤트",function(){
+실행문
+})
+
+선택자.addEventListener("이벤트", ()=>{
+실행문
+})
+
+html요소를 스크립트로 가지고 와서 이벤트를 발생시킬때는 addEventListener를 쓰고 실행문을 만들면 됨
+
+html요소를 클릭해서 함수를 호출할때는
+onclick = "sum()"
+함수로 바로 가기 때문에
+html요소를 스크립트에 선언하지 않음
+-->

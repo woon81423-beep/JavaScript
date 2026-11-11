@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let count = 1;
+        let timer = setInterval(function () {
+          document.write(`안녕하세요<br>`);
+          count++;
+          if (count > 5) {
+            clearInterval(timer);
+          }
+        }, 1000);
+
+        let timer2 = () => {
+          document.write(`안녕하세요2<br>`);
+          count++;
+          if (count > 5) {
+            clearInterval(timer02);
+          }
+        };
+        let timer02 = setInterval(timer2, 1000);
+
+      let timer03 = setInterval(()=> {
+          document.write(`안녕하세요3<br>`);
+          count++;
+          if(count > 5){
+              clearInterval(timer03)
+          }
+      },1000)
+
+      function timer4() {
+        document.write(`안녕4`);
+        count++;
+        if (count > 5) {
+          clearInterval(timer04);
+        }
+      }
+      let timer04 = setInterval(timer4, 1000);
+    </script>
+  </body>
+</html>
+<!--
+
+
+*clearInterval
+setInterval함수를 멈추게 하는 clearInterval
+setInterval을 변수에 넣고
+clearInterval(변수)
+
+let timer = setInterval
+claerInterval(timer)
+
+만약 timer가 여러 곳에서 사용이 된다면 let은 쓰면 안됨
+전역변수로 해야함
+
+
+//
+1초마다 안녕하세요를 출력하는데 5초가 지나면 멈추게 함
+4개의 차임으로 만듦
+-->

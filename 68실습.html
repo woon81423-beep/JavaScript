@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const names = ["철수", "영희", "길동"];
+      let names2 = names.map((name) => {
+        return `${name}님 안녕하세요<br>`;
+      });
+      document.write(names2);
+
+      const numbers = [2, 4, 6, 8];
+      let numbers2 = numbers.map((num) => {
+        return `${num + 5}<br>`;
+      });
+      document.write(numbers2);
+
+      const price = [10000, 20000, 30000, 40000];
+      let price2 = price.map((pri) => {
+        return `${pri - pri * 0.1}`;
+      });
+      document.write(price2);
+    </script>
+  </body>
+</html>
