@@ -7,7 +7,7 @@ let playBtn = document.querySelector("#play");
 let resetBtn = document.querySelector("#reset");
 let computerNum; //랜덤수
 let imggg = document.querySelector("#imggg");
-let chances = 5;
+let chances = 7;
 let userNums = [];
 
 //1부터 100까지의 random숫자 만들기
@@ -64,6 +64,7 @@ function play() {
       chance.textContent = `게임오버`;
       playBtn.disabled = true;
       user.disabled = true;
+      result.textContent = "GAME OVER";
       imgg.src = "image/gameover.mp4";
       imggg.textContent = "";
     } else {
