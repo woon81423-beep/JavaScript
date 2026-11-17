@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 30px 0;
+  background: url("image/bg.png") no-repeat center;
+  background-size: cover;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  
+}
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background: url("image/bg.png") no-repeat center;
+  background-size: cover;
+  filter: blur(6px);
+}
+/* 게임 화면 */
+.game {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: rgba(8, 25, 18, 0.95);
+  border: 1px solid #365947;
+  border-radius: 20px;
+}
+
+.game-title {
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.game-title span {
+  color: #ffda52;
+}
+
+/* 영상과 결과 글자 */
+#pic {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #365947;
+  border-radius: 14px;
+}
+#imgg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#imggg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  color: #ffd447;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: 3px 4px 0 #161616;
+}
+
+/* 전광판 */
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 12px 16px;
+  background-color: #0d2c20;
+  border-radius: 10px;
+}
+
+#chance {
+  color: #ffda52;
+  font-weight: bold;
+}
+
+/* 입력창과 버튼 */
+.game-controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#user,
+.game-controls button {
+  padding: 12px;
+  border: 1px solid #496756;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#user {
+  width: 60%;
+  background-color: #071a13;
+  color: #fff;
+}
+
+#user::placeholder {
+  color: #b4c6bc;
+}
+
+.game-controls button {
+  width: 20%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#play {
+  background-color: #ffda52;
+  color: #211b08;
+}
+
+#play:hover {
+  background-color: #ffe98b;
+}
+
+#reset {
+  background-color: #193b2c;
+  color: #fff;
+}
+
+#reset:hover {
+  background-color: #27523e;
+}

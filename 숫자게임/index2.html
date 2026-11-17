@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>숫자 맞추기 게임</h2>
+    <div>
+      <p>결과화면 : <span id="result">up/down/bingo</span></p>
+      <p>숫자입력</p>
+      <input id="num" placeholder="1~100사이의 숫자를 입력" />
+      <button id="btn" type="button" class="btn btn-danger">시작</button>
+    </div>
+    <script src="js/custon2.js"></script>
+  </body>
+</html>
+<!--
+console.log(Math.floor(num * 100 + 1));
+참고 37,41,65,60,12,40
+
+html요소 가져오기
+1~100까지 숫자만들기(random)
+user에 숫자를 입력하고 play버튼을 클릭하면 입력한 값을 
+변수에 담아야 함(.value)
+user가 입력한 수와 컴퓨터가 random으로 만든 수를 비교 
+com > user ==> up 
+// com < user => down 
+// com = user =>bingo
+-->
