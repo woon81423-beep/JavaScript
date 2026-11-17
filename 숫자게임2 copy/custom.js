@@ -64,7 +64,8 @@ function play() {
       chance.textContent = `게임오버`;
       playBtn.disabled = true;
       user.disabled = true;
-      imgg.src = "image/homerun.mp4";
+      imgg.src = "image/gameover.mp4";
+      imggg.textContent = "";
     } else {
       chance.textContent = `남은찬스 : ${chances}번`;
     }
