@@ -32,6 +32,7 @@ header {
   border-bottom: 4px double #3f2401d0;
   border-top: 4px double #3f2401d0;
   align-items: center;
+  position: relative;
 }
 header h2 {
   height: 100%;
@@ -84,8 +85,12 @@ header .day02 {
   box-shadow: 2px 2px 6px;
   transition: 0.5s;
 }
+
 .con01 button:hover {
-  filter: opacity(0.5);
+  background-color: lightcoral;
+}
+.con01 button.on {
+  background-color: lightcoral;
 }
 .con01_serch {
   margin: -0px 0px 0px 5px;
@@ -144,4 +149,26 @@ header .day02 {
   margin:190px auto;
   z-index: 1;
 }
-#ggif img{width:100%;}
+#ggif img{width:100%;
+transition: 0.5s;}
+/**/
+.sun{
+  position:absolute;
+  width:250px;
+  height:250px;
+  top:30px;
+  left:30px;
+}
+.rain{
+  position:absolute;
+  width:250px;
+  height:250px;
+  top:30px;
+  right:50px;
+}
+.sun img{
+    width:100% 
+}
+.rain img{
+    width:100% 
+}

@@ -4,8 +4,11 @@ let tempEls = document.querySelectorAll("li div");
 let APIkey = "909590cfc9e9bd61ca0141f1c89b7b7e";
 let ulEls = document.querySelectorAll("ul");
 let user = document.querySelector("#user"); //도시입력창
+let re = document.querySelector("#re"); //도시입력창
 let serchBtn = document.querySelector("#serch"); //도시버튼
 let weatherChart;
+let btn = document.querySelector("button");
+
 //검색
 function play() {
   let userCity = user.value;
@@ -13,6 +16,7 @@ function play() {
   if (userCity === "") {
     placeholder.textContent = "도시 이름을 입력해 주세요.";
     user.focus();
+
     return;
   }
   weather2(userCity);
@@ -39,34 +43,49 @@ getLocation(); //현재위치 보내기 실행
 
 //도시이름 버튼 클릭
 async function weather2(cityname) {
-  console.log(cityname);
+  // console.log(cityname);
   let res = await fetch(
     `https://api.openweathermap.org/data/2.5/forecast?q=${cityname}&appid=${APIkey}&lang=kr&units=metric`,
   );
   let data = await res.json();
   // console.log(data);
+  document.querySelector("#cityTitle").textContent = cityname.toUpperCase();
+
   render(data);
 }
+
+// 클릭한 버튼에만 색상 적용
+let btns = document.querySelectorAll(".cityBtn");
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btns.forEach((item) => {
+      item.classList.remove("on");
+    });
+
+    btn.classList.add("on");
+  });
+});
 
 function render(data) {
   console.log("render", data);
   // 날씨에 따라 맨 아래 이미지 변경
-    let weather = data.list[0].weather[0].main;
-    let weatherImg = document.querySelector("#weatherImg");
+  let weather = data.list[0].weather[0].main;
+  let weatherImg = document.querySelector("#weatherImg");
 
-    if (
-      weather === "Rain" ||
-      weather === "Drizzle" ||
-      weather === "Thunderstorm"
-    ) {
-      weatherImg.src = "img/rain.png";
-    } else if (weather === "Snow") {
-      weatherImg.src = "img/winter.png";
-    } else if (weather === "Clouds") {
-      weatherImg.src = "img/grooming.png";
-    } else {
-      weatherImg.src = "img/sunny.png";
-    }
+  if (
+    weather === "Rain" ||
+    weather === "Drizzle" ||
+    weather === "Thunderstorm"
+  ) {
+    weatherImg.src = "img/rain.png";
+  } else if (weather === "Snow") {
+    weatherImg.src = "img/winter.png";
+  } else if (weather === "Clouds") {
+    weatherImg.src = "img/grooming.png";
+  } else {
+    weatherImg.src = "img/sunny.png";
+  }
   //차트
   let chartTime = []; // 차트 시간 배열
   let chartTemp = []; // 차트 온도 배열
@@ -85,7 +104,6 @@ function render(data) {
     let time = item.dt_txt.slice(10, 16);
     timeEls[i].textContent = `${time}`;
     //그립삽화
-    
 
     //차트기온
     chartTime.push(time);
@@ -149,5 +167,4 @@ function render(data) {
 //chart 비어있는 온도배열, 시간배열을 만들어야 함.
 //배열.push(temp)
 //배열.push(label)
-
 //차트

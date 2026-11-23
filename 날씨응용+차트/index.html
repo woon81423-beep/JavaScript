@@ -43,35 +43,35 @@
   <body>
     <header>
       <div class="day">TUESDAY,<br /><span>OCT 26, 1923</span></div>
-      <h2>THE DAILY ATMOSPHERE</h2>
-      <div class="day02">SEOUL<br /><span>EDITION</span></div>
+      <h2 id="cityTitle">SEOUL</h2>
+      <div class="day02">SECRIT<br /><span>EDITION</span></div>
     </header>
     <!--버튼-->
     <div class="con01">
-      <button id="btn01" onclick="getLocation()">CURRENT</button>
-      <button id="btn01" onclick="weather2('Seoul')">SEOUL</button>
-      <button id="btn02" onclick="weather2('busan')">BUSAN</button>
-      <button id="btn03" onclick="weather2('tokyo')">TOKYO</button>
-      <button id="btn04" onclick="weather2('paris')">PARIS</button>
+      <button class="cityBtn on" onclick="getLocation()">CURRENT</button>
+      <button class="cityBtn" onclick="weather2('Seoul')">SEOUL</button>
+      <button class="cityBtn" onclick="weather2('busan')">BUSAN</button>
+      <button class="cityBtn" onclick="weather2('tokyo')">TOKYO</button>
+      <button class="cityBtn" onclick="weather2('paris')">PARIS</button>
       <div class="form-floating mb-3 mt-3 con01_serch">
         <input
           type="text"
           class="form-control"
-          id="email user"
+          id="email user"id="user"
           placeholder="Search for a region"
           name="email"
           onkeydown="if (event.key === 'Enter' && !event.repeat) play();"
         />
-        <label for="email" id="serch">SEARCH</label>
+        <label for="email" >SEARCH</label>
       </div>
       <div class="con01_serch">
-       <button id="serch">SEARCH</button> <br />
+       <button id="serch" class="cityBtn">SEARCH</button> <br />
       </div>
     </div>
     <!--가운데 글씨-->
     <div class="con02">
       <div class="con02_txt">
-        <h3>CLEARING THE SKIES: SEOUL FACES COOL AUTUMN GUSTS</h3>
+        <h3>CLEARING THE SKIES: <span id="re">SEOUL</span> FACES COOL AUTUMN GUSTS</h3>
         <div class="con02_txt02">
           <div>
             Raindrops do not fall in classic teardrop shapes as they descend
@@ -146,6 +146,9 @@
     <section id="ggif">
       <img id="weatherImg" src="img/wind.png" />
     </section>
+    <!---->
+    <div class="sun"><img src="img/mxj_files-sun-27148_512.gif" alt="태양"></div>
+    <div class="rain"><img src="img/mxj_files-rain-22171_512.gif" alt="비"></div>
     <!--스크립트-->
     <script img id="weatherImg" src="custom.js"></script>
   </body>
