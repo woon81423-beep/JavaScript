@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>현재날씨</h2>
+    <input id="user" placeholder="도시를 검색하세요" onkeydown="if (event.key === 'Enter' && !event.repeat) play();"/><button id="serch">검색</button>
+    <br /><button id="btn01" onclick="getLocation()">현재위치</button>
+    <button id="btn01" onclick="weather2('Seoul')">서울</button>
+    <button id="btn02" onclick="weather2('busan')">부산</button>
+    <button id="btn03" onclick="weather2('incheon')">인천</button>
+    <button id="btn04" onclick="weather2('jeju city')">제주</button>
+
+    <div><span>기온</span> <span id="temp"></span><span> ℃ </span></div>
+    <div><span>위치</span> <span id="place"></span></div>
+    <div><span>풍속</span> <span id="wind"></span> m/s</div>
+    <div><span>날씨설명</span> <span id="des"></span></div>
+    <img id="iconImg" />
+
+    <script src="custom_현재위치.js"></script>
+  </body>
+</html>
+<!--
+1. 도시이름넣어서 날씨
+2. 도시버튼클릭해서 날씨
+3. 현재위치클릭해서 날씨
+4. 도시버튼(5개) + 현재위치를 이용해서 날씨
+5. 4번에 검색명을 입력해서 검색버튼 클릭하면 날씨
+6. 3시간간격으로 날씨
+7. 차트
+-->

@@ -1,0 +1,145 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  word-break: keep-all;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+}
+body {
+  background: url(img/Gemini_Generated_Image_2lfvza2lfvza2lfv.png) no-repeat
+    center/cover;
+  height: 100vh;
+  width: 100%;
+
+  min-width: 100vw;
+  margin: 0px auto;
+}
+/**/
+header {
+  margin: 150px auto 0px;
+  width: 700px;
+  height: 80px;
+  /* background-color: rgba(0,0,0,0.2); */
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  border-bottom: 4px double #3f2401d0;
+  border-top: 4px double #3f2401d0;
+  align-items: center;
+}
+header h2 {
+  height: 100%;
+  text-align: center;
+  font-size: 39px;
+  align-items: center;
+}
+header h2::before {
+  content: "";
+  width: 1px;
+  height: 20px;
+  background-color: #000;
+  height: 90%;
+}
+
+/* header h2::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 20px;
+  background-color: #000;
+} */
+header .day02 {
+  text-align: right;
+}
+
+/**/
+.form-control{
+    height: 20px;
+    width:100px;
+}
+.con01 {
+  margin: 15px auto 10px;
+  padding: 5px;
+  width: 700px;
+  /* height:80px; */
+  /* background-color: rgba(0,0,0,0.4); */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.con01 button {
+  width: 80px;
+  height: 40px;
+  border-radius: 20% 20% 0% 0%;
+  background-color: transparent;
+  border: 1px solid #3f2401d0;
+  cursor: pointer;
+  border-bottom: transparent;
+  box-shadow: 2px 2px 6px;
+  transition: 0.5s;
+}
+.con01 button:hover {
+  filter: opacity(0.5);
+}
+.con01_serch {
+  margin: -0px 0px 0px 5px;
+}
+/*con02*/
+.con02 {
+  margin: -15px auto 0px;
+  padding: 5px;
+  width: 700px;
+  font-size: 8px;
+}
+.con02 h3 {
+  font-size: 20px;
+  margin-top: 0px;
+}
+.con02_txt02 {
+  margin: 5px 0px 0px 10px;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 0.8fr 0.8fr 0.8fr 1.3fr;
+}
+.con02_txt02 div {
+  padding: 0px;
+}
+.con02_img {
+  /* background-color: #3f2401a9; */
+}
+/*일기예보*/
+#now {
+  margin: 10px auto 0px;
+  width: 700px;
+  position: relative;
+}
+.day_img {
+  width: 700px;
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+.day_img li {
+  text-align: center;
+  width: (100% / 7);
+  font-size: 10px;
+  padding: 10px 12px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+/**/
+#ggif {
+  width: 750px;
+  height: 300px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  margin:190px auto;
+  z-index: 1;
+}
+#ggif img{width:100%;}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>HTML Geolocation</h1>
+    <p>Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo"></p>
+
+    <script>
+      //   const x = document.querySelector("#demo"); >> 콘솔값으로 받음
+
+        function getLocation() {
+          navigator.geolocation.getCurrentPosition(success);
+        }
+
+        function success(position) {
+          // x.innerHTML =
+          //   "Latitude: " +
+          //   position.coords.latitude +
+          //   "<br>Longitude: " +
+          //   position.coords.longitude; >> 콘솔값으로 받음
+
+          console.log(position.coords.latitude, position.coords.longitude)
+        }
+
+        //   function error() {
+        //     alert("Sorry, no position available.");
+        //   } >>에러 결과값은 없앰
+    </script>
+  </body>
+</html>
+
+<!--
+navigator.geolocation :: 브라우저는 사용자에게 위치 데이터 접근 권한을 요청
+
+getCurrentPosition()) :: 사용자의 현재 위치를 반환하는데 사용 
+-->

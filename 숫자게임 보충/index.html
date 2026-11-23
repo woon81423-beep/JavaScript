@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+    //   console.log("클릭");
+      console.log(Math.floor(1.2)); //수학함수로 소수점을 없앰
+      let num = 20.357;
+    //   console.log(Math.floor(num));
+
+      num = Math.random(); //랜덤된 숫자를 만드는 수학함수
+      console.log(Math.floor(num * 100 + 1));
+      function randomNum(){
+        computerNum = Math.floor(Math.random()*100 +1);
+      }
+      //시작버튼을 클릭
+
+    play.addEventListener("click",()=>{
+      let userNum =Nunber(user.value);
+      if (computerNum > userNum){
+        result.textContent = "up"
+      }else if(computerNum < userNum){
+        result.textContent
+      }
+    })
+    </script>
+  </body>
+</html>
+
+<!--
+Math.floor(실수형 숫자)
+-->

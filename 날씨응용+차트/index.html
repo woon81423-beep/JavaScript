@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        word-break: keep-all;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: inherit;
+      }
+
+      ul {
+        display: flex;
+        gap: 20px;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      li {
+        border: 1px solid #3f2401d0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="day">TUESDAY,<br /><span>OCT 26, 1923</span></div>
+      <h2>THE DAILY ATMOSPHERE</h2>
+      <div class="day02">SEOUL<br /><span>EDITION</span></div>
+    </header>
+    <!--버튼-->
+    <div class="con01">
+      <button id="btn01" onclick="getLocation()">CURRENT</button>
+      <button id="btn01" onclick="weather2('Seoul')">SEOUL</button>
+      <button id="btn02" onclick="weather2('busan')">BUSAN</button>
+      <button id="btn03" onclick="weather2('incheon')">TOKYO</button>
+      <button id="btn04" onclick="weather2('jeju city')">PARIS</button>
+      <div class="form-floating mb-3 mt-3 con01_serch">
+        <input
+          type="text"
+          class="form-control"
+          id="email user"
+          placeholder="Search for a region"
+          name="email"
+          onkeydown="if (event.key === 'Enter' && !event.repeat) play();"
+        />
+        <label for="email" id="serch">SEARCH</label>
+      </div>
+      <div class="con01_serch">
+       <button id="serch">SEARCH</button> <br />
+      </div>
+    </div>
+    <!--가운데 글씨-->
+    <div class="con02">
+      <div class="con02_txt">
+        <h3>CLEARING THE SKIES: SEOUL FACES COOL AUTUMN GUSTS</h3>
+        <div class="con02_txt02">
+          <div>
+            Raindrops do not fall in classic teardrop shapes as they descend
+            through the atmosphere. While a small droplet starts out roughly
+            spherical due to surface tension, the upward rush of air flattens
+            its bottom into a shape more like a hamburger bun. Only when a drop
+            grows large enough to split apart does it briefly trail a thin,
+            tapered wake before breaking into smaller pieces.
+          </div>
+          <div>
+            Thunder never strikes without lightning, yet the two are simply
+            different manifestations of the same electrical discharge. Lightning
+            heats the surrounding air in a fraction of a second to temperatures
+            hotter than the surface of the sun. That sudden thermal expansion
+            sends out a shockwave that we hear as thunder, traveling far more
+            slowly than the flash of light that caused it./li>
+          </div>
+          <div>
+            A rainbow is not a physical arch anchored in a specific spot on the
+            horizon, but an optical illusion shaped by the angle of sunlight.
+            Each observer sees their own personal rainbow formed by light
+            refracting, reflecting, and dispersing inside countless suspended
+            water droplets. Because the geometry depends on where you stand,
+            moving forward or sideways shifts the entire arc along with you.
+          </div>
+          <div class="con02_img"><canvas id="myChart"></canvas></div>
+        </div>
+      </div>
+    </div>
+    <!--날씨예보+이미지-->
+    <div id="now">
+      <ul class="day_img">
+        <li>
+          <img />
+          <p>9:00</p>
+          <div class="temp">2도</div>
+        </li>
+        <li>
+          <img />
+
+          <p>9:00</p>
+          <div class="temp">2도</div>
+        </li>
+        <li>
+          <img />
+          <p>9:00</p>
+          <div class="temp">2도</div>
+        </li>
+        <li>
+          <img />
+          <p>9:00</p>
+          <div class="temp">2도</div>
+        </li>
+        <li>
+          <img />
+          <p>9:00</p>
+          <div class="temp">2도</div>
+        </li>
+        <li>
+          <img />
+          <p>9:00</p>
+          <div class="temp">2도</div>
+        </li>
+        <li>
+          <img />
+          <p>9:00</p>
+          <div class="temp">2도</div>
+        </li>
+      </ul>
+    </div>
+    <!--차트자리-->
+    <section id="ggif">
+      <img id="weatherImg" src="img/wind.png" />
+    </section>
+    <!--스크립트-->
+    <script img id="weatherImg" src="custom.js"></script>
+  </body>
+</html>
+<!--
+1.heml 요소 가지고오기
+(이미지, p , input, button)
+-->

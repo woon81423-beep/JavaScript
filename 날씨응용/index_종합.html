@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        word-break: keep-all;
+        box-sizing: border-box;
+      }
+      ul {
+        list-style: none;
+      }
+      a {
+        color: inherit;
+      }
+      div {
+        margin: 20px 0px;
+      }
+      ul {
+        display: flex;
+        gap: 20px;
+        opacity:0;
+        transition:opacity 0.5s
+      }
+      li {
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>현재날씨</h2>
+    <input
+      id="user"
+      placeholder="도시를 검색하세요"
+      onkeydown="if (event.key === 'Enter' && !event.repeat) play();"
+    /><button id="serch">검색</button> <br /><button
+      id="btn01"
+      onclick="getLocation()"
+    >
+      현재위치
+    </button>
+    <button id="btn01" onclick="weather2('Seoul')">서울</button>
+    <button id="btn02" onclick="weather2('busan')">부산</button>
+    <button id="btn03" onclick="weather2('incheon')">인천</button>
+    <button id="btn04" onclick="weather2('jeju city')">제주</button>
+
+    
+    <!-- <div><span>기온</span> <span id="temp"></span><span> ℃ </span></div>
+    <div><span>위치</span> <span id="place"></span></div>
+    <div><span>풍속</span> <span id="wind"></span> m/s</div>
+    <div><span>날씨설명</span> <span id="des"></span></div>
+    <img id="iconImg" /> -->
+    <ul>
+      <li>
+        <img/>
+        <p>9:00</p>
+        <div class="temp">2도</div>
+      </li>
+      <li>
+        <img />
+        <p>9:00</p>
+        <div class="temp">2도</div>
+      </li>
+      <li>
+        <img />
+        <p>9:00</p>
+        <div class="temp">2도</div>
+      </li>
+      <li>
+        <img />
+        <p>9:00</p>
+        <div class="temp">2도</div>
+      </li>
+      <li>
+        <img />
+        <p>9:00</p>
+        <div class="temp">2도</div>
+      </li>
+      <li>
+        <img />
+        <p>9:00</p>
+        <div class="temp">2도</div>
+      </li>
+      <li>
+        <img />
+        <p>9:00</p>
+        <div class="temp">2도</div>
+      </li>
+    
+
+    <script src="custom_종합.js"></script>
+  </body>
+</html>
+<!--
+1.heml 요소 가지고오기
+(이미지, p , input, button)
+-->
